@@ -3,7 +3,7 @@
 )}}
 
 {%- set date_granularity_list = ['day','week','month','quarter','year'] -%}
-{%- set exclude_fields = ['date','day','week','month','quarter','year','last_updated','unique_key'] -%}
+{%- set exclude_fields = ['date','day','week','month','quarter','year','last_updated','unique_key','kpi_metric','source','kpi_currency','kpi_goal'] -%}
 {%- set dimensions = ['account_id','account_name','campaign_id','campaign_name','campaign_status','campaign_type','campaign_budget'] -%}
 {%- set measures = adapter.get_columns_in_relation(ref('adroll_campaigns_insights'))
                     |map(attribute="name")
